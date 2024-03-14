@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><i class="fa-brands fa-github"></i>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <div class="container body1" id="cv-form">
+    <h1 class="text-center my-2">Resume Generator</h1>
+    <div class="row">
+        <div class="col-md-6">
+        <h3>Personal Information</h3>
+        <div class="form-group" >
+            <label for="namefield">Your Name</label>
+            <input type="text"  id="namefield" placeholder="Enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2" >
+            <label for="phonefield">Your Contanct</label>
+            <input type="text"  id="phonefield" placeholder="Enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2" >
+            <label for="addressfield"> Your Address</label>
+            <textarea type="text"  id="addressfield" placeholder="Enter here"  rows="4"class="form-control"></textarea>
+        </div>
+
+        <p class="text-secondary my-2"> Important usernames</p>
+        <div class="form-group" >
+            <label for="mailfield">Email-id </label>
+            <input type="text"  id="mailfield" placeholder="Enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2" >
+            <label for="linkedinfield">Linkedin </label>
+            <input type="text"  id="linkedinfield" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group mt-2" >
+            <label for="githubfield">Gihub </label>
+            <input type="text"  id="githubfield" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group mt-2" >
+            <label for="instafield">Instagram </label>
+            <input type="text"  id="instafield" placeholder="Username" class="form-control">
+        </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Professional Information</h3>
+            <div class="form-group " id="pf" >
+                <label for="">Profile </label>
+                <textarea  id="profilefield" placeholder="Enter here"  rows="7"class="form-control pffield"></textarea>
+            </div>
+            <div class="form-group mt-2" id="pj" >
+                <label for="">Projects </label>
+                <textarea   placeholder="Enter here"  rows="2"class="form-control pjfield"></textarea>
+            
+            <div class="container text-center mt-2" id="pjadd">
+                <button  onclick="Newaddpj()"  class="btn btn-info">Add</button>
+            </div>
+            </div>
+            <div class="form-group mt-2 " id="in" >
+                <label for="">Internships</label>
+                <textarea type="text"  placeholder="Enter here"  rows="2"class="form-control infield"></textarea>
+                <div class="container text-center mt-2" id="inadd">
+                    <button onclick="Newaddin()" type="button" class="btn btn-info">Add</button>
+                </div>
+            </div>
+            <div class="form-group mt-2 " id="ts" >
+                <label for="">Techincal Skills</label>
+                <textarea type="text"   placeholder="Enter here"  rows="2"class="form-control tsfield"></textarea>
+                <div class="container text-center mt-2" id="tsadd">
+                    <button onclick="Newaddts()" type="button" class="btn btn-info">Add</button>
+                </div>
+            </div>
+            <div class="form-group mt-2 " id="lg" >
+                <label for="">Languages Known</label>
+                <textarea type="text"   placeholder="Enter here"  rows="2"class="form-control lgfield"></textarea>
+                <div class="container text-center mt-2" id="lgadd">
+                    <button onclick="Newaddlg()" type="button" class="btn btn-info">Add</button>
+                </div>
+            </div>
+            <div class="form-group mt-2 " id="ed" >
+                <label for="">Educational Details</label>
+                <textarea   type="text"   placeholder="Enter here"  rows="2"class="form-control edfield"></textarea>
+            
+              <div class="container text-center mt-2" id="edadd">
+                <button  onclick="Newadded()"type="button" class="btn btn-info">Add</button>
+               </div>
+            </div>
+            
+            
+
+
+        </div>
+    </div>
+  
+   
+    <div class="container text-center mt-2">
+        <button  onclick="generatecv()" type="button" class="btn btn-primary btn-lg ">Generate Resume</button>
+    </div>
+</div>
+
+<div class="container body1" id="cv-template">
+   <div class="row">
+   
+    <div class="col-md-4 mt-3 text-center background">
+    <img src="C:\Users\rohit\Downloads\.vscode\profilepic.webp" class="img-fluid mt-3 myimg">
+     <div class="container bg">
+        <p id="nameT">Manda Rupa</p>
+        <div class="callid">
+            <i class="fa-solid fa-phone"></i>
+       
+        </div>
+        <div class="callid">
+            <p id="phoneT">+91 1232323221 ,+91 8847932500</p>
+        </div><br>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="location">
+        <p id="locationT">Kondamanjuluru,Bapatla district,
+            Andhra Pradesh</p>
+        </div>
+       
+        <hr>
+     </div>
+     <div class="inline">
+        <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="inline">
+        <p id="gitT">rupa_manda</p>
+        </div><br>
+        <div class="inline2">
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="inline2">
+            <p id="linkedinT">rupa manda</p>
+        </div><br>
+       <div class="inline3">
+        <i class="fa-brands fa-instagram"></i>
+       </div>
+       <div class="inline3">
+        <p id="instaT">rupa_manda_222</p>
+       </div><br>
+       <div class="mailid">
+        <i class="fa-solid fa-envelope"></i>
+       </div>
+       <div class="mailid">
+        <p id="mailT">rupamanda0@gmail.com</p>
+       </div>
+       <div class="profile">
+        <h3 id="pf">Profile</h3>
+        <p id="profileT">I am hard-worker,enthusiastic,quick-learner and pour my heart and soul into 
+            crafting digital experiences that
+            exceed user expectations.i have many interests like singind ,dancing and acting.
+
+        </p>
+       </div>
+        <div class="lk">
+            <h3>Languages Known</h3>
+            <ul type="none" id="languageT">
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Tamil</li>
+                <li>Telugu</li>
+            </ul>
+        </div>
+      
+
+     
+    </div>
+    <div class="col-md-8 body2">
+        <h1 class="text-center my-3" id="nameT2" style="font-weight:980">Manda Rupa</h1>
+    <div class="inpj mt-5">
+        <hr>
+        <div class="infopj">
+            <h3>Projects</h3>
+        </div>
+        <div class="inpfbody">
+            <ul id="projectT">
+                <li>using c programming
+                    ATM machine
+                </li>
+                <li>
+                    using OOPS with c++
+                    EMI calculator
+                </li>
+                <li>
+                    using python
+                    rock paper and scissors
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="inis mt-5">
+        <div class="infois">
+            <h3>Internships</h3>
+        </div>
+        <div class="infoisbody">
+            <ul id="internshipsT">
+                <li>Coding raja 
+                    using html,css,javascript
+
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="ints mt-5">
+        <div class="infots">
+            <h3>Technical Skills</h3>
+        </div>
+        <div class="infotsbody">
+            <ul id="technicalskillsT">
+                <li>C and C++</li>
+                <li>Python </li>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Java script</li>
+                <li>Data structures</li>
+                <li>Algorithms</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="ined mt-5">
+        <div class="infoed">
+            <h3>Educational Details</h3>
+        </div>
+        <div class="infoedbody">
+            <ul id="educationalT">
+                <li>Class-X sri chaitanya school(Martur) 95%
+                </li>
+                <li>Sri chaitanya junior school(Guntur) 97.5%</li>
+                <li>BTECH SRM University (Manglagiri) 81%</li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="container py-3 text-center">
+        <button onclick="printcv()" class="btn background">Print CV</button>
+    </div>
+    </div>
+   </div>
+</div>
+
+
+    
+ <script src="logic.js"></script>
+</body>
+</html>

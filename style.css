@@ -1,0 +1,60 @@
+body{
+    background-color:beige;
+}
+.myimg
+{
+    border:1px solid rgb(129, 16, 16);
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    
+}
+.background
+{
+    background-color:GRAY;
+    color:rgb(146, 48, 77);
+    border-radius:15%;
+    border:1px solid rgb(33, 146, 146);
+}
+.bg{
+color:rgb(139, 37, 37);
+}
+.inline
+{
+    display:inline-block;
+    
+}
+.inline2
+{
+    display:inline-block;
+}
+.inline3
+{
+    display:inline-block;
+}
+.mailid
+{
+    display:inline-block;
+}
+.callid
+{
+    display:inline-block ;
+}
+.location
+{
+    display:inline-block;
+}
+.body2
+{
+    border:1px solid rgb(53, 141, 57);
+    border-radius:9%;
+}
+#cv-template
+{
+
+    display:none;
+}
+#nameT
+{
+    font-size:20px;
+}
